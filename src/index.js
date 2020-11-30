@@ -86,10 +86,10 @@ let newId = studentsData.length;
         studentsData[st].currentClass = parseInt(req.body.currentClass);
       }
       if(req.body.division){
-        studentsData[st].name = req.body.division;
+        studentsData[st].division = req.body.division;
       }  
 
-      req.set("content-type", "application/x-www-form-urlencoded");
+      res.set("content-type", "application/x-www-form-urlencoded");
       res.send({
           name:req.body.name
       });
