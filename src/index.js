@@ -48,7 +48,7 @@ let newId = studentsData.length;
           return;
       }
 
-      students.push({
+      studentsData.push({
           id: newId+1,
           name: newStudent.name,
           currentClass: parseInt(newStudent.currentClass),
@@ -67,7 +67,7 @@ let newId = studentsData.length;
  app.put("/api/student/:id" ,(req,res) => {
       let id = parseInt(req.params.id);
 
-      if(!id){
+      if(isNaN(id)){
           req.sendStatus(400);
           return;
       }
